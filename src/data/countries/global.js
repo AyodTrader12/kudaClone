@@ -1,0 +1,3 @@
+const global = {
+    code: 'global',
+}

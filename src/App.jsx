@@ -1,9 +1,10 @@
 import React from 'react'
+import Header from './static/Header'
 
 const App = () => {
   return (
     <div>
-      app
+      <Header/>
       
     </div>
   )
