@@ -10,17 +10,34 @@ const COMING_SOON = [
 ]
 
 // Circular flag using the country's emoji flag rendered large inside a circle
-function FlagCircle({ flag, size = 40 }) {
+function FlagCircle({ flag, flagSrc, size = 40 }) {
+  const baseStyle = {
+    width: size,
+    height: size,
+    background: '#f0f4ff',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    overflow: 'hidden',
+    borderRadius: '9999px',
+  }
+
+  if (flagSrc) {
+    return (
+      <div className="flex-shrink-0" style={baseStyle}>
+        <img
+          src={flagSrc}
+          alt="flag"
+          style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
+        />
+      </div>
+    )
+  }
+
   return (
     <div
       className="rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden"
-      style={{
-        width: size,
-        height: size,
-        background: '#f0f4ff',
-        fontSize: size * 0.55,
-        lineHeight: 1,
-      }}
+      style={{ ...baseStyle, fontSize: size * 0.55, lineHeight: 1 }}
     >
       {flag}
     </div>
@@ -53,7 +70,7 @@ export default function CountrySelector() {
       <button
         onClick={() => setOpen((v) => !v)}
         className={`
-          flex items-center gap-2 border rounded-full px-3 py-1.5
+          flex items-center bg-blue-500;  rounded-full px-3 py-1.5
           text-sm font-medium transition-all duration-200
           ${open
             ? 'border-kuda-purple bg-kuda-purple-light text-kuda-purple'
@@ -61,17 +78,21 @@ export default function CountrySelector() {
           }
         `}
       >
-        <span className="text-lg leading-none">{country.flag}</span>
-        <span className="hidden sm:inline text-[13px]">{country.name}</span>
+        {country.flagSrc ? (
+          <img src={country.flagSrc} alt={country.name} style={{ width: 20, height: 20, borderRadius: '50%' }} />
+        ) : (
+          <span className="text-lg leading-none">{country.flag}</span>
+        )}
+        {/* <span className="hidden sm:inline text-[13px]">{country.name}</span> */}
         <motion.span
           animate={{ rotate: open ? 180 : 0 }}
           transition={{ duration: 0.2 }}
           className="flex items-center opacity-60"
         >
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+          {/* <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
             <path d="M2 4.5L6 8L10 4.5" stroke="currentColor"
               strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+          </svg> */}
         </motion.span>
       </button>
 
@@ -87,14 +108,14 @@ export default function CountrySelector() {
             style={{ width: 520 }}
           >
             <div
-              className="bg-white rounded-2xl overflow-hidden flex"
+              className="bg-white rounded-xl overflow-hidden flex"
               style={{ boxShadow: '0 16px 56px rgba(0,0,0,0.14)', border: '1px solid #f0eaf8' }}
             >
 
               {/* ── LEFT PANEL ── */}
               <div
                 className="flex flex-col p-6 relative"
-                style={{ width: 210, background: '#eef0fb', flexShrink: 0 }}
+                style={{ width: 290, background: '#eef0fb', flexShrink: 0 }}
               >
                 {/* Close X button */}
                 <button
@@ -111,7 +132,7 @@ export default function CountrySelector() {
                     className="w-12 h-12 rounded-full flex items-center justify-center text-2xl"
                     style={{ background: 'linear-gradient(135deg, #a8d8ea, #6ec6e6)' }}
                   >
-                    🌍
+            <img src={country.flagSrc} alt={country.name} style={{ width: 20, height: 20, borderRadius: '50%' }} />
                   </div>
                 </div>
 
@@ -155,7 +176,7 @@ export default function CountrySelector() {
                       `}
                       style={{ background: isActive ? '#f3f4f6' : 'transparent' }}
                     >
-                      <FlagCircle flag={c.flag} size={38} />
+                      <FlagCircle flag={c.flag} flagSrc={c.flagSrc} size={38} />
                       <span
                         className={`text-[14px] ${
                           isActive ? 'font-semibold text-gray-900' : 'font-normal text-gray-700'

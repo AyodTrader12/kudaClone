@@ -5,33 +5,9 @@ import { ALL_NAV_ITEMS } from '../data/NavItems.js'
 import NavDropdown from './navDropDown.jsx'
 import CountrySelector from './CountrySelector.jsx'
 import MobileDrawer from './mobileDrawer.jsx'
-
+import logo from "../assets/kudalogo.svg"
 // ─── Kuda logomark — stylised K matching the real brand icon ─────────────────
 // The real Kuda K is two angular shapes forming a K with a gap in the middle
-function KudaLogoMark() {
-  return (
-    <svg
-      width="36"
-      height="36"
-      viewBox="0 0 36 36"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      {/* Left vertical bar of K */}
-      <rect x="6" y="6" width="6" height="24" rx="2" fill="#40196d" />
-      {/* Top-right diagonal of K */}
-      <path
-        d="M12 18 L26 6 L32 6 L18 18 Z"
-        fill="#40196d"
-      />
-      {/* Bottom-right diagonal of K */}
-      <path
-        d="M12 18 L26 30 L32 30 L18 18 Z"
-        fill="#40196d"
-      />
-    </svg>
-  )
-}
 
 export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState(null)
@@ -39,7 +15,7 @@ export default function Navbar() {
   const scrolled = useScrolled(20)
 
   const handleToggle = (label) => {
-    setOpenDropdown((prev) => (prev === label ? null : label))
+    setOpenDropdown(label)
   }
 
   const closeAll = () => setOpenDropdown(null)
@@ -74,50 +50,21 @@ export default function Navbar() {
           }
         `}
       >
-        <div className="max-w-site mx-auto px-6 h-[72px] flex items-center">
+        <div className="max-w-site mx-auto px-14 h-[72px] flex items-center">
 
           {/* ── LOGO ── */}
           <a
             href="/"
-            className="flex items-center gap-2 flex-shrink-0 no-underline"
+            className="flex items-center gap-5 flex-shrink-0 no-underline"
             style={{ marginRight: 40 }}
           >
-            <KudaLogoMark />
+            <img src={logo} alt="Kuda Logo" className="h-18 w-20" />
 
-            <div className="flex flex-col justify-center leading-none">
-              {/* kuda. with dot */}
-              <span
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 900,
-                  fontSize: 21,
-                  color: '#40196d',
-                  letterSpacing: '-0.02em',
-                  lineHeight: 1,
-                }}
-              >
-                kuda.
-              </span>
-              {/* MICROFINANCE BANK subtitle */}
-              <span
-                style={{
-                  fontFamily: "'DM Sans', sans-serif",
-                  fontWeight: 600,
-                  fontSize: 7,
-                  color: '#40196d',
-                  letterSpacing: '0.14em',
-                  textTransform: 'uppercase',
-                  lineHeight: 1,
-                  marginTop: 3,
-                }}
-              >
-                Microfinance Bank
-              </span>
-            </div>
+           
           </a>
 
           {/* ── Desktop nav links ── */}
-          <nav className="hidden lg:flex items-center gap-0 flex-1">
+          <nav className="hidden lg:flex items-center gap-0 text-[#40196d]">
             {ALL_NAV_ITEMS.map((item) => (
               <NavDropdown
                 key={item.label}
@@ -129,7 +76,7 @@ export default function Navbar() {
           </nav>
 
           {/* ── Desktop right side: Sign In | Join Kuda | Flag ── */}
-          <div className="hidden lg:flex items-center gap-4 ml-auto">
+          <div className="hidden lg:flex items-center gap-7 ml-auto">
 
             {/* Sign In — plain text only, no button styling */}
             <a
@@ -138,7 +85,7 @@ export default function Navbar() {
               style={{
                 fontSize: 14,
                 fontWeight: 600,
-                color: '#0d0d1a',
+                color: '#40196d',
               }}
               onMouseEnter={(e) => (e.target.style.color = '#40196d')}
               onMouseLeave={(e) => (e.target.style.color = '#0d0d1a')}
@@ -155,9 +102,9 @@ export default function Navbar() {
               style={{
                 background: '#40196d',
                 color: '#ffffff',
-                fontWeight: 700,
+                fontWeight: 500,
                 fontSize: 14,
-                padding: '11px 24px',
+                padding: '14px 27px',
                 borderRadius: 10,
                 display: 'inline-block',
                 lineHeight: 1,

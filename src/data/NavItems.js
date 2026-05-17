@@ -1,14 +1,21 @@
+import discoverPersonal from "../assets/discoverPersonal.svg"
+import transferSpend from "../assets/transferSpend.svg"
+import save from "../assets/save.svg"
+import investments from "../assets/investment.svg"
+import kudaCard from "../assets/kudaCard.svg"
+import businessreg from "../assets/businessreg.svg"
+import kudapayroll from "../assets/kudapayroll.svg"
 export const NAV_PERSONAL = {
   label: 'Personal',
   sections: [
     {
    
       items: [
-        { label: 'Discover Personal', iconBg: '#ede9fe', iconColor: '#40196d',  iconSvg: 'home',      active: true },
-        { label: 'Transfer & Spend',  iconBg: '#d1fae5', iconColor: '#059669',  iconSvg: 'send'                   },
-        { label: 'Save',              iconBg: '#fef3c7', iconColor: '#d97706',  iconSvg: 'save'                   },
-        { label: 'Investments',       iconBg: '#e0e7ff', iconColor: '#4338ca',  iconSvg: 'chart'                  },
-        { label: 'Kuda Card',         iconBg: '#d1fae5', iconColor: '#059669',  iconSvg: 'card'                   },
+        { label: 'Discover Personal', icon: discoverPersonal,  },
+        { label: 'Transfer & Spend',  icon: transferSpend,  },
+        { label: 'Save',              icon: save,  },
+        { label: 'Investments',       icon: investments,  },
+        { label: 'Kuda Card',         icon: kudaCard,  },
       ],
     },
     {
@@ -40,14 +47,40 @@ export const NAV_BUSINESS = {
     {
       title: null,
       items: [
-        { label: 'Business Account', iconBg: '#ede9fe', iconColor: '#40196d', iconSvg: 'building'  },
-        { label: 'Payroll',          iconBg: '#d1fae5', iconColor: '#059669', iconSvg: 'payroll'   },
-        { label: 'Payment Links',    iconBg: '#dbeafe', iconColor: '#2563eb', iconSvg: 'link'      },
+        { label: ' DiscoverBusiness ', icon: discoverPersonal,  },
+        { label: 'Business Registration', icon: businessreg,  },
+        { label: 'Kuda Payroll',    icon: kudapayroll,  },
         { label: 'Invoicing',        iconBg: '#fef3c7', iconColor: '#d97706', iconSvg: 'invoice'   },
         { label: 'Team Access',      iconBg: '#e0e7ff', iconColor: '#4338ca', iconSvg: 'team'      },
         { label: 'Analytics',        iconBg: '#d1fae5', iconColor: '#059669', iconSvg: 'analytics' },
       ],
     },
+    {
+      title:"PAYMENTS",
+      items: [
+        {label:"Send Money",icon: discoverPersonal},
+        {label:"TV",icon: discoverPersonal},
+        {label:"Airtime &Internet Data",icon: discoverPersonal},
+        {label:"Electricity",icon: discoverPersonal},
+        {label:"Bill Payments",icon: discoverPersonal},
+      
+      ]
+    },
+    {
+      title:"CREEDITS",
+      items:[
+        {label:"Business Loan",icon: discoverPersonal},
+      ]
+    },
+    {
+      title:"COLLECTIONS",
+      items:[
+        {label:"softPOS",icon: discoverPersonal},
+        {label:"Invoicing for Businesses",icon: discoverPersonal},
+        {label:"POS Machine",icon: discoverPersonal},
+        {label:"Virtual POS",icon: discoverPersonal},
+      ]
+    }
   ],
 }
 
