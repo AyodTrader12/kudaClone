@@ -5,6 +5,9 @@ import investments from "../assets/investment.svg"
 import kudaCard from "../assets/kudaCard.svg"
 import businessreg from "../assets/businessreg.svg"
 import kudapayroll from "../assets/kudapayroll.svg"
+import Electricity from "../assets/electricity.svg"
+import airtime from "../assets/airtime.svg"
+import internet from "../assets/internet.svg"   
 export const NAV_PERSONAL = {
   label: 'Personal',
   sections: [
@@ -21,9 +24,9 @@ export const NAV_PERSONAL = {
     {
       title: 'PAYMENTS',
       items: [
-        { label: 'Electricity',        iconBg: '#fee2e2', iconColor: '#dc2626', iconSvg: 'bolt'      },
-        { label: 'Airtime',            iconBg: '#d1fae5', iconColor: '#059669', iconSvg: 'phone'     },
-        { label: 'Internet',           iconBg: '#dbeafe', iconColor: '#2563eb', iconSvg: 'wifi'      },
+        { label: 'Electricity',        icon: Electricity,     },
+        { label: 'Airtime',            icon: airtime,   },
+        { label: 'Internet',           icon: internet,      },
         { label: 'Gift Cards',         iconBg: '#1e293b', iconColor: '#f8fafc', iconSvg: 'gift'      },
         { label: 'Cardless Payments',  iconBg: '#fef3c7', iconColor: '#d97706', iconSvg: 'globe'     },
         { label: 'TV',                 iconBg: '#dbeafe', iconColor: '#2563eb', iconSvg: 'tv'        },

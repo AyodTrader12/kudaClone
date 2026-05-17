@@ -4,7 +4,7 @@ const nigeria = {
     name: 'Nigeria',
     flag: '🇳🇬',
     urlPrefix: '/en-ng',
-    flagSrc: 'https://flagcdn.com/w80/ng.png',
+    flagSrc:nigeriaflag 
 }
-
+// 'https://flagcdn.com/w80/ng.png',
 export default nigeria
