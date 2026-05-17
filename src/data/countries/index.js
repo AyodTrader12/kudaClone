@@ -1,7 +1,7 @@
 import global from './global.js'
 import nigeria from './nigeria.js'
 import uk from './uk.js'
-import canada from './canada.js'
+import canada from "./canada.js"
 
 
 // Keyed by country code for easy lookup

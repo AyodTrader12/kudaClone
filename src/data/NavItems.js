@@ -2,7 +2,7 @@ export const NAV_PERSONAL = {
   label: 'Personal',
   sections: [
     {
-      title: null,
+   
       items: [
         { label: 'Discover Personal', iconBg: '#ede9fe', iconColor: '#40196d',  iconSvg: 'home',      active: true },
         { label: 'Transfer & Spend',  iconBg: '#d1fae5', iconColor: '#059669',  iconSvg: 'send'                   },

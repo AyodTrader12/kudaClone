@@ -1,3 +1,5 @@
-const canada = {
-    code: 'ca',
+  const canada =  {
+ code: 'ca'
 }
+   
+export default canada
