@@ -1,48 +1,52 @@
 
 import { CreditCard, Moon, Users, Send, PiggyBank } from 'lucide-react'
-
+import features1 from "../../assets/features1.svg"
+import features2 from "../../assets/feature2.svg"
+import features3 from "../../assets/feature3.svg"
+import features4 from "../../assets/feature4.svg"
+import features5 from "../../assets/feature5.svg"
 
 const topFeatures = [
   {
-    icon: <CreditCard className="w-6 h-6 text-purple-700" />,
+    icon:<img src={features1} alt="Feature 1" className="w-6 h-6" />,
     title: 'Order a Kuda card on the app with pickup and delivery options.'
   },
   {
-    icon: <Moon className="w-6 h-6 text-purple-700" />,
+    icon:<img src={features2} alt="Feature 2" className="w-6 h-6" />,
     title: 'Enjoy cashless payment options online and offline.'
   },
   {
-    icon: <Users className="w-6 h-6 text-purple-700" />,
+    icon: <img src={features3} alt="Feature 3" className="w-6 h-6" />,
     title: 'Pay your essential bills and buy gift cards easily.'
   }
 ]
 
 const bottomFeatures= [
   {
-    icon: <Send className="w-6 h-6 text-purple-700" />,
+    icon: <img src={features4} alt="Feature 4" className="w-6 h-6" />,
     title: 'Get 25 free transfers to Nigerian banks every month.'
   },
   {
-    icon: <PiggyBank className="w-6 h-6 text-purple-700" />,
+    icon: <img src={features5} alt="Feature 5" className="w-6 h-6" />,
     title: 'Save money automatically any time you spend.'
   }
 ]
 
 export default function Features() {
   return (
-    <section className="w-full py-16 md:py-24 px-4 md:px-8 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="w-full py-16 md:py-24 px-4 sm:px-6 lg:px-14 bg-white">
+      <div className="max-w-site mx-auto">
         {/* Top Row - 3 Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-8 md:mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 md:gap-3 mb-8 md:mb-10">
           {topFeatures.map((feature, index) => (
             <div
               key={index}
-              className="bg-purple-50 rounded-xl p-6 md:p-8 flex flex-col items-start gap-4"
+              className="bg-white shadow-md rounded-md p-3 md:p-4 flex items-center md:flex-col md:items-start gap-3 max-w-sm md:max-w-sm"
             >
-              <div className="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center">
+              <div className="w-11 h-11 bg-purple-200 rounded-full flex items-center justify-center">
                 {feature.icon}
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-purple-900">
+              <h3 className="text-[12px] md:text-sm font-bold text-purple-900">
                 {feature.title}
               </h3>
             </div>
@@ -50,16 +54,16 @@ export default function Features() {
         </div>
 
         {/* Bottom Row - 2 Cards Centered */}
-        <div className="flex flex-col md:flex-row gap-6 md:gap-8 justify-center md:justify-center">
+        <div className="flex flex-col md:flex-row gap-5 md:gap-3 justify-center">
           {bottomFeatures.map((feature, index) => (
             <div
               key={index}
-              className="bg-purple-50 rounded-xl p-6 md:p-8 flex flex-col items-start gap-4 md:max-w-xs"
+              className="bg-white shadow-md rounded-md p-6 md:p-4 flex items-center md:flex-col md:items-start gap-3 max-w-xs"
             >
-              <div className="w-12 h-12 bg-purple-200 rounded-full flex items-center justify-center">
+              <div className="w-11 h-10 bg-purple-200 rounded-full flex items-center justify-center">
                 {feature.icon}
               </div>
-              <h3 className="text-lg md:text-xl font-bold text-purple-900">
+              <h3 className="text-[12px] md:text-sm font-bold text-purple-900">
                 {feature.title}
               </h3>
             </div>

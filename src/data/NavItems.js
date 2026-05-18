@@ -8,6 +8,11 @@ import kudapayroll from "../assets/kudapayroll.svg"
 import Electricity from "../assets/electricity.svg"
 import airtime from "../assets/airtime.svg"
 import internet from "../assets/internet.svg"   
+import giftcard from "../assets/giftcard.svg"
+import cardless from "../assets/cardless.svg"
+import tv from "../assets/tv.svg"
+import betting from "../assets/betting.svg"
+import transport from "../assets/transport.svg"
 export const NAV_PERSONAL = {
   label: 'Personal',
   sections: [
@@ -27,11 +32,11 @@ export const NAV_PERSONAL = {
         { label: 'Electricity',        icon: Electricity,     },
         { label: 'Airtime',            icon: airtime,   },
         { label: 'Internet',           icon: internet,      },
-        { label: 'Gift Cards',         iconBg: '#1e293b', iconColor: '#f8fafc', iconSvg: 'gift'      },
-        { label: 'Cardless Payments',  iconBg: '#fef3c7', iconColor: '#d97706', iconSvg: 'globe'     },
-        { label: 'TV',                 iconBg: '#dbeafe', iconColor: '#2563eb', iconSvg: 'tv'        },
-        { label: 'Betting',            iconBg: '#fee2e2', iconColor: '#dc2626', iconSvg: 'betting'   },
-        { label: 'Transport',          iconBg: '#d1fae5', iconColor: '#059669', iconSvg: 'transport' },
+        { label: 'Gift Cards',         icon: giftcard     },
+        { label: 'Cardless Payments',  icon: cardless     },
+        { label: 'TV',                 icon: tv        },
+        { label: 'Betting',            icon: betting   },
+        { label: 'Transport',          icon: transport },
       ],
     },
     {
