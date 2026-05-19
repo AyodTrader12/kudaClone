@@ -10,6 +10,7 @@ import Section5 from './Section1'
 import Section6 from './Section6'
 import MoreForYou from './MoreForYou'
 import ComparisonTable from './ComparisonTable'
+import LastSection from './LastSection'
 const FullPage = () => {
   return (
       <motion.main
@@ -29,6 +30,7 @@ const FullPage = () => {
       <Section6/>
       <ComparisonTable/>    
       <MoreForYou/>
+      <LastSection/>
     </motion.main>
   )
 }

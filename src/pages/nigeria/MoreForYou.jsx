@@ -23,7 +23,7 @@ export default function MoreForYou() {
 
   return (
     <section className="w-full py-16 px-4 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <h2 className="text-5xl font-bold text-center  text-[#40196d] mb-16">
           More for you
@@ -32,11 +32,11 @@ export default function MoreForYou() {
         {/* Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {cards.map((card, index) => {
-            const IconComponent = card.icon;
+           
             return (
               <div
                 key={index}
-                className="bg-white rounded-lg p-8 flex flex-col shadow-md"
+                className="bg-white rounded-lg p-10 flex flex-col shadow-md"
               >
                 {/* Icon */}
                 <div className="mb-8">
