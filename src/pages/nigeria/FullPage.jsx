@@ -4,6 +4,12 @@ import Hero from "./Hero"
 import Features from './Features'
 import Section1 from './Section1'
 import Section2 from './Section2'
+import Section3 from './Section3'
+import Section4 from './Section4'
+import Section5 from './Section1'
+import Section6 from './Section6'
+import MoreForYou from './MoreForYou'
+import ComparisonTable from './ComparisonTable'
 const FullPage = () => {
   return (
       <motion.main
@@ -17,6 +23,12 @@ const FullPage = () => {
       <Features />
       <Section1/>
       <Section2/>
+      <Section3/>
+      <Section4/>
+      <Section5/>
+      <Section6/>
+      <ComparisonTable/>    
+      <MoreForYou/>
     </motion.main>
   )
 }

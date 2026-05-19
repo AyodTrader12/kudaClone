@@ -2,7 +2,7 @@
 
 
 import { ChevronRight } from 'lucide-react'
-import account from "../../assets/account.png"
+import contact from "../../assets/contact.png"
 export default function Section5() {
   return (
     <section className="w-full bg-white px-6 py-16 md:py-24 lg:py-5 lg:px-24">
@@ -11,13 +11,11 @@ export default function Section5() {
           {/* Left Column - Text Content */}
           <div className="flex flex-col gap-6 md:gap-8">
             <h1 className="text-4xl md:text-3xl lg:text-4xl font-bold text-[#40196d] leading-tight font-sans">
-              We’re always happy to help you.
+              Your phone + our app + a debit card = a simpler life.
             </h1>
 
             <p className="text-base md:text-sm text-black leading-relaxed font-sans max-w-lg">
-           You can chat with us on the app, slide into our DMs, tweet, leave an Instagram comment, send an email or call. However you choose to reach out, there’ll always be a friendly person there to make your life easy.
-
-
+              We designed a money app for your lifestyle, and you <br/>can get a debit card to go with it. That&apos;s all you need <br/>to make the right money moves.
             </p>
 
             <div>
@@ -25,7 +23,7 @@ export default function Section5() {
                 href="#"
                 className="inline-flex items-center gap-1 text-[#40196d] font-medium hover:gap-3 transition-all duration-300 text-base md:text-sm underline"
               >
-                Get help
+                Open An Account in Minutes
                 <ChevronRight className="w-5 h-5 md:w-4 md:h-4" />
               </a>
             </div>
@@ -35,9 +33,9 @@ export default function Section5() {
           <div className="flex justify-center items-center">
             <div className="relative w-full max-w-md aspect-square">
               <img
-                src={account}
+                src={contact}
                 alt="Woman using Kuda app with debit card"
-                fill
+                 fill
                 className="object-contain"
                 priority
               />
